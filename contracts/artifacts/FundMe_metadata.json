@@ -1,0 +1,114 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "balance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "fun",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getConvertionPrice",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getPrice",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getVersion",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "minimumUsd",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/FundMe.sol": "FundMe"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/FundMe.sol": {
+			"keccak256": "0xbf1090fa5bcf4fcf436cde609d72274e611171a05243c27a6d5a1dcdeb2e99f3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://94466c96a17112c1191c2ca8f87f6e68ceaf5475d77c3494f492482446a4ad79",
+				"dweb:/ipfs/QmSqbmHNvWedB4FVxJKbizxcLp9az4XJGMb97WkEx84H8b"
+			]
+		},
+		"contracts/interfaces/AggregatorV3interface.sol": {
+			"keccak256": "0xae6dd921957d8ef3f2152ae14b9acabed01180b6e605f3cf42afc6b67339cb7e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3360fb3106b0a1c695fe370875aa7b06f046de52db83d207fd3eea0c386a3d72",
+				"dweb:/ipfs/QmWbXAyTNBLQdVSiB2uWotLRcdZEL8LaG52K9bTXJKaidZ"
+			]
+		}
+	},
+	"version": 1
+}
