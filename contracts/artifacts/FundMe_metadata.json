@@ -51,51 +51,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "ethAmount",
-						"type": "uint256"
-					}
-				],
-				"name": "getConversionRate",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getPrice",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getVersion",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
 				"name": "minimumUsd",
 				"outputs": [
@@ -106,6 +61,13 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -145,11 +107,19 @@
 			]
 		},
 		"contracts/FundMe.sol": {
-			"keccak256": "0x6de43747f2153b3742a1473e2d53f18f5afdcf9cb5ecc61a3558b498dbed95e4",
+			"keccak256": "0xb377a7db7f13de1b52b645e269dd038ee7a44d4fa29a9428398e56c4b2d7d5f6",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://73bc0d02726a332a9ce438d753b90e7a5940a3660a92080174c2409af09a70dd",
-				"dweb:/ipfs/QmQSjEkZ9wkF5j9SGHFpRRZRS3Lq4ftF2ySA8qszGyFcyL"
+				"bzz-raw://8dfb3dc4a1caf2cbb5642628747fd444c6757e9ed0b2be135741c1489c948af8",
+				"dweb:/ipfs/QmeRKo6gFJNtn9VcU47zyepc5FbWix5CBNV1iEVCPnyMy4"
+			]
+		},
+		"contracts/library/priceConverter.sol": {
+			"keccak256": "0xfdd5f20b241652f0b552dae94f1b648849c3afcadd35456499954d140e9275cf",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://357fe6a8a56bebe5d0126de51937971b0867ca2ad1fd1741059e4af4f76b82fe",
+				"dweb:/ipfs/QmYAe52VWUyuGDZLF5iPcRBCLtAAEymgEhita5fp9eD1QR"
 			]
 		}
 	},

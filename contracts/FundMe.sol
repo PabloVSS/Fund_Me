@@ -1,8 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.26;
 
-import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol";
+import {PriceConverter} from "contracts/library/priceConverter.sol";
+
 contract FundMe{
+
+    using PriceConverter for uint256;
    
     uint256 public minimumUsd = 5e18;
 
@@ -12,32 +15,19 @@ contract FundMe{
     function fun() public payable{
             //Allow users to send $
             // Have minimum $ sent 5$
-            require(getConversionRate(msg.value) >= minimumUsd, "didn't send enought ETH");
+            require(msg.value.getConversionRate() >= minimumUsd, "didn't send enought ETH");
             funders.push(msg.sender);
-            addressToAmountFunded[msg.sender] = addressToAmountFunded[msg.sender] + msg.value;
+            addressToAmountFunded[msg.sender] += msg.value;
         
     }
 
-    function getPrice() public view returns (uint256){
-        //Adress 0x694AA1769357215DE4FAC081bf1f309aDC325306
-        AggregatorV3Interface priceFeed = AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306);
-        (,int256 answer,,,) = priceFeed.latestRoundData();
-        return uint256(answer * 1e10);
+    function withdraw() public{
+        for(uint256 funderIndex = 0 ; funderIndex < funders.length; funderIndex++ ){
+            address funder = funders[funderIndex];
+            addressToAmountFunded[funder] = 0;
+        }
     }
 
-    function getConversionRate(uint256 ethAmount)public view returns (uint256){
-        uint256 ethPrice = getPrice();
-        uint256 ethAmountInUsd = (ethPrice * ethAmount) / 1e18;
-        return ethAmountInUsd;
-    }
-
-    function getVersion() public view returns (uint256){
-        return AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306).version();
-
-    } 
-
-
-    //function withdraw() public{}
 
 
 }
