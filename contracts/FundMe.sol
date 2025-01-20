@@ -23,7 +23,7 @@ contract FundMe{
         i_owner = msg.sender;
     }
 
-    function fun() public payable{
+    function fund() public payable{
             //Allow users to send $
             // Have minimum $ sent 5$
             require(msg.value.getConversionRate() >= MINIMUM_USD, "didn't send enought ETH");
@@ -57,6 +57,19 @@ contract FundMe{
         if(msg.sender != i_owner) {revert NotOwner();}
         _;
     }
+
+
+    //What happens if someone sends is contract ETH without calling the fund function?
+
+    //receive() Receber
+    receive() external payable {
+        fund();
+     }
+     
+    //fallback()
+    fallback() external payable {
+        fund();
+     }
 
 
 
